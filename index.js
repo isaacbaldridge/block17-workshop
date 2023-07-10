@@ -38,10 +38,19 @@ const sumPrice = coffeePrices.reduce((accumulator, currentValue) =>{
     return accumulator
 }, 0)
 
-console.log(`The combined price of one of every drink is: `,sumPrice)
+console.log(`The combined price of one of every drink is: $${sumPrice}`)
+
+
+
 
 // 6.) prints an array of all seasonal drinks
+console.log("The seasonal drinks are: ")
+const seasonal = coffeeMenu.filter(menuItem => menuItem.seasonal)
+console.log(seasonal)
 
 
 
 
+// 7.) prints all seasonal drinks and "with important beans" after each item name
+console.log("seasonal drink specials")
+const BEANS = seasonal.forEach(menuItem => console.log(menuItem.name, " with imported beans"))
